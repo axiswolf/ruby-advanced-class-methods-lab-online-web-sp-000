@@ -13,22 +13,26 @@ class Song
   def find_or_create_by_name(name)
 
   end
-  def self.create(name)
+  def self.create #class constructor
     song = self.new
-    song.name = name
-    @@all << song
+    self.all << song
+    song
   end
 
-  def self.new_by_name
-    @@all.new_by_name
+  def self.new_by_name(title)
+    song = self.new
+    song.name = title
+    song
   end
 
-  def self.create_by_name
-
+  def self.create_by_name(title)
+    song = self.new
+    song.name = title
+    song
   end
 
-  def self.find_by_name
-
+  def self.find_by_name(title)
+  
   end
 
   def self.find_or_create_by_name
