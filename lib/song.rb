@@ -10,9 +10,6 @@ class Song
     self.class.all << self
   end
 
-  def find_or_create_by_name(name)
-
-  end
   def self.create #class constructor
     song = self.new
     self.all << song
@@ -36,7 +33,7 @@ class Song
     result
   end
 
-  def self.find_or_create_by_name(title)
+  def self.create_by_name(title)
     result = self.find_by_name(title)
     if result
       result
